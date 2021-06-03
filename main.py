@@ -24,7 +24,7 @@ class KeywordQueryEventListener(EventListener):
 
         if event.get_keyword() == "en2id":
             text = event.get_argument()
-            query = urllib.urlencode({text: text})
+            query = urllib.urlencode({"text": text})
             url = "https://en2id-server.vercel.app/en-id?" + query
             response = requests.request("GET", url)
             data = response.json()
@@ -37,7 +37,7 @@ class KeywordQueryEventListener(EventListener):
 
         if event.get_keyword() == "id2en":
             text = event.get_argument()
-            query = urllib.urlencode({text: text})
+            query = urllib.urlencode({"text": text})
             url = "https://en2id-server.vercel.app/id-en?" + query
             response = requests.request("GET", url)
             data = response.json()
