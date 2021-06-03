@@ -37,13 +37,13 @@ class KeywordQueryEventListener(EventListener):
 
         if event.get_keyword() == "id2en":
             text = event.get_argument()
-            query = urllib.urlencode({"text": text})
-            url = "https://en2id-server.vercel.app/id-en?" + query
+            # query = urllib.urlencode({"text": text})
+            # url = "https://en2id-server.vercel.app/id-en?" + query
             # response = requests.request("GET", url)
             # data = response.json()
 
             items.append(ExtensionResultItem(icon='images/icon.png',
-                                                 name='%s' % url,
+                                                 name='%s' % text,
                                                  description=''
                                                  ))
             # if data["text"] is not None:
