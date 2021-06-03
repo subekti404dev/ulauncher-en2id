@@ -37,7 +37,7 @@ class KeywordQueryEventListener(EventListener):
 
         if event.get_keyword() == "id2en":
             text = event.get_argument()
-            query = urllib.urlencode({"text": text})
+            query = text.replace(" ", "+")
             # url = "https://en2id-server.vercel.app/id-en?" + query
             # response = requests.request("GET", url)
             # data = response.json()
