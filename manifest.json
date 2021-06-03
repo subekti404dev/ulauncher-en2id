@@ -1,0 +1,26 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "En-Id Translator",
+  "description": "Allow user to translate english text to indonesian",
+  "developer_name": "Urip Subekti",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.1
+  },
+  "preferences": [
+    {
+      "id": "en_id",
+      "type": "keyword",
+      "name": "En to Id",
+      "description": "English to Indonesian",
+      "default_value": "en2id"
+    },
+    {
+      "id": "id_en",
+      "type": "keyword",
+      "name": "Id to En",
+      "description": "Indonesian to English",
+      "default_value": "id2en"
+    }
+  ]
+}
